@@ -1,0 +1,59 @@
+/* contacto.css — estilos de Contacto y Políticas. Variables con valor por defecto
+   para no depender de lo que defina style.css. */
+:root {
+  --c-texto: #1c1c1e;
+  --c-fondo: #f6f6f4;
+  --c-acento: #1f4d3a;
+  --c-error: #b3261e;
+  --c-ok: #1b6e3a;
+  --c-borde: #c9c9c4;
+}
+
+.pagina-contacto, .pagina-politicas {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: var(--c-texto);
+  background: var(--c-fondo);
+  line-height: 1.6;
+}
+
+.sitio-header, .sitio-footer {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: .75rem; padding: 1rem 1.5rem; background: #fff;
+}
+.sitio-header nav a { margin-left: 1rem; color: var(--c-acento); text-decoration: none; }
+.sitio-header nav a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+.logo { font-weight: 800; color: var(--c-texto); text-decoration: none; }
+
+main { max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+
+.campo { margin-bottom: 1.25rem; }
+.campo label { display: block; font-weight: 600; margin-bottom: .35rem; }
+.campo input[type="text"], .campo input[type="email"], .campo textarea {
+  width: 100%; box-sizing: border-box; padding: .65rem .75rem;
+  border: 1.5px solid var(--c-borde); border-radius: 8px; font: inherit;
+}
+.campo input:focus, .campo textarea:focus { outline: 3px solid #9fd0b8; border-color: var(--c-acento); }
+.campo [aria-invalid="true"] { border-color: var(--c-error); }
+
+.campo-check { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem; }
+.campo-check label { display: inline; font-weight: 400; margin: 0; }
+.campo-check .error { flex-basis: 100%; }
+
+.error { color: var(--c-error); font-size: .875rem; margin: .3rem 0 0; min-height: 1.2em; }
+.contador { text-align: right; font-size: .8rem; color: #666; margin: .2rem 0 0; }
+
+.boton {
+  background: var(--c-acento); color: #fff; border: 0; border-radius: 8px;
+  padding: .75rem 1.5rem; font: inherit; font-weight: 700; cursor: pointer;
+}
+.boton:hover { filter: brightness(1.15); }
+
+.estado { margin-top: 1rem; font-weight: 600; }
+.estado-ok { color: var(--c-ok); }
+.estado-error { color: var(--c-error); }
+
+/* Políticas */
+.politicas h2 { margin-top: 2rem; color: var(--c-acento); }
+.politicas .actualizado { color: #666; font-size: .9rem; }
+.sitio-footer { justify-content: center; margin-top: 3rem; }
